@@ -20,6 +20,10 @@ public class UI : MonoBehaviour
         GameManager.instance.AddClicks(1);
         clickButtonImage.sprite = buttonSprites[Random.Range(0, buttonSprites.Length)];
     }
+    public void OnShowAdButton()
+    {
+        AdManager.instance.PlayAdForClicks();
+    }
     public void UpdateClickText()
     {
         clickText.text = GameManager.instance.curClicks.ToString();
